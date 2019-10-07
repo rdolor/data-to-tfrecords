@@ -4,12 +4,13 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-pandas = "*"
 pytest = "*"
 autopep8 = "*"
+pylint = "*"
 
 [requires]
 python_version = "3.6"
 
 [packages]
 tensorflow = "==1.12.0"
+pandas = "*"
