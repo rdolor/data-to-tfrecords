@@ -7,4 +7,4 @@ To install the virtualenv, run `pipenv install --ignore-pipfile`
 
 To convert the text file to TFrecord file, run `python main.py`
 
-To run the code's tests, do `pytest test_utlis.py`
+To run the code's tests, do `pytest test_utils.py`
