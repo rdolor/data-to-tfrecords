@@ -13,8 +13,9 @@ def test_create_filename():
     filetype = 'test'
     now = datetime.now()
     timestamp = now.strftime("%Y-%m-%dT%H:%M:%S.%f")
-    result = utils.create_filename(filetype, now)
-    assert result == os.getcwd() + '/data_to_tf/output/train_data_' + \
+    prefix = "test_data_"
+    result = utils.create_filename(filetype, now, prefix)
+    assert result == os.getcwd() + '/data_to_tf/output/' + prefix + \
         timestamp + '.test'
 
 

@@ -18,7 +18,7 @@ def str_to_int(list_str):
         return [0]
 
 
-def preprocess_df(filename, num_rows=None):
+def preprocess_df(filename, features, num_rows=None):
     """Read txt file and preprocess
     Args: 
         str: filename of the txt data
@@ -28,17 +28,18 @@ def preprocess_df(filename, num_rows=None):
     import config
 
     try:
-        df = pd.read_csv(config.filename, sep="\t", nrows=num_rows)
+        df = pd.read_csv(filename, sep="\t", nrows=num_rows)
         logging.info('df shape: rows %d cols %d', df.shape[0], df.shape[1])
+
+        df = df[features]
+        df["usertag"] = df["usertag"].astype(str).map(
+            lambda x: str_to_int(x.split(",")))
+        #df.fillna(0, inplace=True)
+
+        return df
+
     except Exception as ex:
         logging.error("Reading data error: %s", ex, exc_info=True)
-
-    df = df[config.all_features]
-    df["usertag"] = df["usertag"].astype(str).map(
-        lambda x: str_to_int(x.split(",")))
-    #df.fillna(0, inplace=True)
-
-    return df
 
 
 def create_logger():
@@ -54,14 +55,13 @@ def create_logger():
     return logging.getLogger(__name__)
 
 
-def create_filename(filetype, now):
+def create_filename(filetype, now, prefix="train_data_"):
     """Create the filename
     Args:
         filetype (str): What type of file that will be created.
     Returns:
         str: String of the file name that will be created.
     """
-    prefix = "train_data_"
     extension = "." + filetype.lower()
     timestamp = now.strftime("%Y-%m-%dT%H:%M:%S.%f")
 
