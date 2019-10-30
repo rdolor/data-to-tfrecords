@@ -1,4 +1,4 @@
-FROM  python:3.6-slim-stretch as data-to-tf-base
+FROM  python:3.6-slim-stretch as data-to-tfrecords-base
 WORKDIR "/"
 RUN apt-get update -qq && \
     apt-get install -yqq --no-install-recommends vim &&  \

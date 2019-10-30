@@ -1,6 +1,8 @@
 from datetime import datetime
 
+import data_to_tfrecords.config as config
 import tensorflow as tf
+import pandas as pd
 import logging
 import os
 
@@ -24,9 +26,7 @@ def preprocess_df(filename, features, num_rows=None):
         str: filename of the txt data
         int: number of rows to get from the file
     """
-    import pandas as pd
-    import config
-
+    
     try:
         df = pd.read_csv(filename, sep="\t", nrows=num_rows)
         logging.info('df shape: rows %d cols %d', df.shape[0], df.shape[1])
@@ -107,7 +107,7 @@ def write_to_tfrecords(data_df, features):
         pandas dataframe: each column is a feature
         list: list of features
     """
-    import config
+    #import config
 
     tf_file = create_filename('tf', datetime.now())
 
@@ -143,7 +143,7 @@ def extract_tfrecords(data_record):
     Returns:
         Dictionary of tensors; each key is a feature
     """
-    from data_to_tf import config
+    #from data_to_tf import config
     # import config  #main.py
 
     features = {}

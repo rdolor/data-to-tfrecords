@@ -5,7 +5,8 @@ import tensorflow as tf
 import numpy as np
 import os
 
-from data_to_tf import utils, config
+import data_to_tfrecords.config as config
+import data_to_tfrecords.utils as utils
 
 
 def test_create_filename():
@@ -15,7 +16,7 @@ def test_create_filename():
     timestamp = now.strftime("%Y-%m-%dT%H:%M:%S.%f")
     prefix = "test_data_"
     result = utils.create_filename(filetype, now, prefix)
-    assert result == os.getcwd() + '/data_to_tf/output/' + prefix + \
+    assert result == os.getcwd() + '/data_to_tfrecords/output/' + prefix + \
         timestamp + '.test'
 
 
@@ -39,7 +40,7 @@ def test_check_dtype():
 
 
 def test_extract_TFrecords():
-    tf_file_dir = os.getcwd() + '/data_to_tf/test/data/data_to_test.tf'
+    tf_file_dir = os.getcwd() + '/data_to_tfrecords/test/data/data_to_test.tf'
     batch_size = 100
 
     input_padded_shapes = {}

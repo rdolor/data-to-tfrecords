@@ -1,6 +1,6 @@
-import utils
-import config
-import validate
+import data_to_tfrecords.config as config
+import data_to_tfrecords.utils as utils
+import data_to_tfrecords.validate as validate
 
 
 def main():

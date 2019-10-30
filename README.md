@@ -5,6 +5,6 @@ The standardized format of [iPinYou RTB dataset](https://github.com/wnzhang/make
 
 To install the virtualenv, run `pipenv install --ignore-pipfile`
 
-To convert the text file to TFrecord file, run `python main.py`
+To convert the text file to TFrecord file, run `python -m data_to_tfrecords.main`
 
-To run the code's tests, do `pytest test_utils.py`
+To run the code's tests, do `pytest data_to_tfrecords/test/test_utils.py`
