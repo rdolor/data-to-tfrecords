@@ -1,3 +1,4 @@
+![](https://github.com/rdolor/data_toTFrecords/workflows/.github/workflows/pythonapp.yml/badge.svg)
 # data_toTFrecords
 
 A simple project to transform a text file to TFRecords.
