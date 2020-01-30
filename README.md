@@ -1,4 +1,4 @@
-![](https://github.com/rdolor/data_toTFrecords/workflows/.github/workflows/pythonapp.yml/badge.svg)
+[![Actions Status](https://github.com/rdolor/data_toTFrecords/workflows/.github/workflows/pythonapp.yml/badge.svg)](https://github.com/rdolor/data_toTFrecords/actions)
 # data_toTFrecords
 
 A simple project to transform a text file to TFRecords.
