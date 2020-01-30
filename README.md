@@ -1,6 +1,6 @@
 [![Actions Status](https://github.com/rdolor/data_toTFrecords/workflows/Python%20application/badge.svg)](https://github.com/rdolor/data_toTFrecords/actions)
 
-# data_toTFrecords
+# data_to_TFrecords
 
 A simple project to transform a text file to TFRecords.
 The standardized format of [iPinYou RTB dataset](https://github.com/wnzhang/make-ipinyou-data) is used.
