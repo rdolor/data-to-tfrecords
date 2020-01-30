@@ -1,4 +1,4 @@
-[![Actions Status](https://github.com/rdolor/data_toTFrecords/workflows/Python%20application/badge.svg)](https://github.com/rdolor/data_toTFrecords/actions)
+[![Actions Status](https://img.shields.io/github/workflow/status/apache/arrow/Python?color=orange&label=actions&logo=github&logoColor=orange&style=for-the-badge)](https://github.com/rdolor/data_toTFrecords/actions)
 
 # data_toTFrecords
 
