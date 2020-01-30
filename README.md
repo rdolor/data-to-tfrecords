@@ -1,4 +1,4 @@
-[![Actions Status](https://github.com/rdolor/data_toTFrecords/workflows/Python%20application/badge.svg)](https://github.com/rdolor/data_toTFrecords/actions?query=workflow%3ABuild+branch%3Amaster)
+[![Actions Status](https://github.com/rdolor/data_toTFrecords/workflows/Python%20application/badge.svg)](https://github.com/rdolor/data_toTFrecords/actions)
 
 # data_toTFrecords
 
