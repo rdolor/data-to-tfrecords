@@ -1,7 +1,5 @@
 [![Actions Status](https://github.com/rdolor/data_toTFrecords/workflows/Python%20application/badge.svg)](https://github.com/rdolor/data_toTFrecords/actions)
 
-https://github.com/actions/toolkit/workflows/Main%20workflow/badge.svg
-
 # data_toTFrecords
 
 A simple project to transform a text file to TFRecords.
