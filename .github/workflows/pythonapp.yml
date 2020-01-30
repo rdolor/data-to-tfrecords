@@ -4,21 +4,19 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python 3.6
-      uses: actions/setup-python@v1
-      with:
-        python-version: 3.6
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install pipenv
-        pipenv install --ignore-pipfile
-        pipenv shell
-    - name: Test with pytest
-      run: |
-        pytest data_to_tfrecords/test/test_utils.py
+      - uses: actions/checkout@v1
+      - name: Set up Python 3.6
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.6
+      - name: Install pipenv
+        uses: dschep/install-pipenv-action@v1
+      - name: Install dependencies
+        run: |
+          pipenv install --dev
+      - name: Test with pytest
+        run: |
+          pipenv run pytest data_to_tfrecords/test/test_utils.py
