@@ -2,6 +2,6 @@
 BASE=$(dirname $0)
 cd $BASE/
 
-TAG="data_to_tfrecords:dev"
+TAG="data-to-tfrecords:master"
 docker build -t=$TAG ./
 

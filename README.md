@@ -1,12 +1,60 @@
-[![Actions Status](https://github.com/rdolor/data_toTFrecords/workflows/Python%20application/badge.svg)](https://github.com/rdolor/data_toTFrecords/actions)
+[![Actions Status](https://github.com/rdolor/data_toTFrecords/workflows/Python%20application/badge.svg)](https://github.com/rdolor/data-to-tfrecords/actions)
 
-# data_to_TFrecords
+# Transform txt file data to TFrecords
 
-A simple project to transform a text file to TFRecords.
-The standardized format of [iPinYou RTB dataset](https://github.com/wnzhang/make-ipinyou-data) is used.
+## Overview
+This is a simple module that demonstrates how to transform text file data to TFRecords format.
+The project contains:
+```
+$ tree
+.
+├── build.sh
+├── docker
+│   └── Dockerfile
+├── ini
+│   └── setting.ini
+├── output
+│   └── train_data_2020-04-10T15:32:34.572126.tf
+├── Pipfile
+├── Pipfile.lock
+├── README.md
+├── src
+│   ├── config.py
+│   ├── __init__.py
+│   ├── main.py
+│   ├── utils.py
+│   └── validate.py
+└── tests
+    ├── data
+    │   ├── TF
+    │   │   └── data_to_test.tf
+    │   └── TXT
+    │       └── test.log.txt
+    ├── __init__.py
+    └── test_utils.py
+```
 
-To install the virtualenv, run `pipenv install --ignore-pipfile`
+## Dataset
+, there is a sample of real-life txt file data that we may want to transform to TFRecords and feed to a TF dataset-based data pipelining when training a model. This text file is grabbed from the standardized data format of [iPinYou RTB dataset](https://github.com/wnzhang/make-ipinyou-data), campaign 1458.
 
-To convert the text file to TFrecord file, run `python -m data_to_tfrecords.main`
+The text files from the standardized data format of [iPinYou RTB dataset](https://github.com/wnzhang/make-ipinyou-data) is an example of real-life text file datasets that we may want to transform to TFRecords and feed to a TF dataset-based data pipelining when training a model. For testing the code, one of those text files can be moved to `tests/data/TXT` to run the `src/main.py`. This project was tested using the files from campaign 1458.
 
-To run the code's tests, do `pytest data_to_tfrecords/test/test_utils.py`
+## How to create the environment and run
+
+1. Using pipenv 
+
+* To create or activate a virtual env: `pipenv shell`
+
+    * Install all required packages:
+        * install packages exactly as specified in **Pipfile.lock**: `pipenv sync`
+        * install using the **Pipfile**, including the dev packages: `pipenv install --dev`
+
+* To run the tests: `pytest`
+* To convert a text file to TFrecord file, run: `python -m src.main`
+
+1. Using docker
+
+* Build the image: `make build`
+* Create a container: `docker run -it data-to-tfrecords:master bash`
+* Inside the container, run the main file: `python -m src.main`
+

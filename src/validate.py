@@ -1,4 +1,4 @@
-import data_to_tfrecords.config as config
+import src.config as config
 import logging
 
 INI_SECTIONS     = ["DIRECTORY"]

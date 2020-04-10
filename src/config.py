@@ -10,4 +10,4 @@ all_features        = features_dtype_int + features_dtype_list
 # Read Config file
 INI = configparser.RawConfigParser()
 INI.optionxform = str
-INI.read('./data_to_tfrecords/ini/setting.ini')
+INI.read('ini/setting.ini')

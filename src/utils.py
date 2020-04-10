@@ -1,6 +1,6 @@
 from datetime import datetime
 
-import data_to_tfrecords.config as config
+import src.config as config
 import tensorflow as tf
 import pandas as pd
 import logging
@@ -65,7 +65,7 @@ def create_filename(filetype, now, prefix="train_data_"):
     extension = "." + filetype.lower()
     timestamp = now.strftime("%Y-%m-%dT%H:%M:%S.%f")
 
-    file_dir = os.path.dirname(os.path.realpath(__file__))
+    file_dir = os.getcwd()
     file_dir_filetype = file_dir + "/output"
 
     if not os.path.isdir(file_dir_filetype):
