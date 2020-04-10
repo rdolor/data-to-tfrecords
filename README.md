@@ -35,11 +35,9 @@ $ tree
 ```
 
 ## Dataset
-, there is a sample of real-life txt file data that we may want to transform to TFRecords and feed to a TF dataset-based data pipelining when training a model. This text file is grabbed from the standardized data format of [iPinYou RTB dataset](https://github.com/wnzhang/make-ipinyou-data), campaign 1458.
-
 The text files from the standardized data format of [iPinYou RTB dataset](https://github.com/wnzhang/make-ipinyou-data) is an example of real-life text file datasets that we may want to transform to TFRecords and feed to a TF dataset-based data pipelining when training a model. For testing the code, one of those text files can be moved to `tests/data/TXT` to run the `src/main.py`. This project was tested using the files from campaign 1458.
 
-## How to create the environment and run
+## How to create the environment
 
 1. Using pipenv 
 

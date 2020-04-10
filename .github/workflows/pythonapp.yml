@@ -19,4 +19,4 @@ jobs:
           pipenv install --dev
       - name: Test with pytest
         run: |
-          pipenv run pytest data_to_tfrecords/test/test_utils.py
+          pipenv run pytest
