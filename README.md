@@ -39,7 +39,7 @@ The text files from the standardized data format of [iPinYou RTB dataset](https:
 
 ## How to create the environment
 
-1. Using pipenv 
+**1. Using pipenv**
 
 * To create or activate a virtual env: `pipenv shell`
 
@@ -50,7 +50,7 @@ The text files from the standardized data format of [iPinYou RTB dataset](https:
 * To run the tests: `pytest`
 * To convert a text file to TFrecord file, run: `python -m src.main`
 
-1. Using docker
+**2. Using docker**
 
 * Build the image: `make build`
 * Create a container: `docker run -it data-to-tfrecords:master bash`
